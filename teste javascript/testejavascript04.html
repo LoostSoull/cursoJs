@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>acenda a lampada</title>
+    <script>
+        var quebrada = false;
+        function mudaLampada(tipo){
+            
+            if (!quebrada) {
+                document.getElementById("luz").src = "_imagens/" + tipo + ".jpg"; 
+                if (tipo == 'lampada-quebrada') {
+                    quebrada = true;
+                    /*aqui resumimos todo o codigo usando a "concatenação" eliminamos os if's e deixamos apenas se e a lampada nao quebra, vamos usar o parametro tipo e buscar os valotes atribuidos a ele e suas ações no script e caso quebre continua usando a variavel quebrada, com a sintaxe:  "_imagens/" + tipo + ".jpg"; estamos indicando que o document.getelementbyid("luz").sr =  vai buscar na pasta "_imagens" o sinal de adição "+" tambem conhecido como concatenação, vai unir a pasta imagens, com o valor do tipo "nome da imagem da pasta" com a extenção ".jpg", assim simplificando muito nosso codigo*/
+                }
+            
+            }
+        
+        }
+       
+    </script>
+   
+</head>
+<body> 
+    <h1> Acenda a lampada</h1>
+    <img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove="mudaLampada('lampada-acesa')" onmouseout="mudaLampada('lampada-apagada')" onclick="mudaLampada('lampada-quebrada')"/>
+    
+</body>
+</html>

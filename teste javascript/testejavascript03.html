@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>acenda a lampada</title>
+    <script>
+        var quebrada = false;
+        function mudaLampada(tipo){
+            if (tipo == 1) {
+                arquivo = "_imagens/lampada-acesa.jpg";
+            }
+            if (tipo == 2) {
+                arquivo = "_imagens/lampada-apagada.jpg";
+            }
+            if (tipo == 3){
+                arquivo = "_imagens/lampada-quebrada.jpg";
+            }
+            if (!quebrada) {
+                document.getElementById("luz").src= arquivo; 
+                if (tipo == 3) {
+                    quebrada = true;
+                }
+            
+            }
+        
+        }
+       /*aqui simplificamos para uma função só, porem utilizamos o comando IF, em uma tradução literal significa "se", foi acrescentado o parametro "tipo", le é o responsavel por receber os valores do muda lampada e distribuilos, com o comando IF, perguntamos "se (if)" o aquivo "tipo" foi igual a 1 , usando o comando arquivo que esta atribuido a uma imagem, ele vai imprimir isso na tela, foi declarado uma variavel global "quebrada", ela se torna global pois nao esta dentro de nenhuma função e no efeito "cascata" ela vem antes, para manter o loop, apos a lampada ser quebrada, nao tera mais cncerto, pois a variavel antes da função ganha esse valor de "lampada quebrada", temos um if com (!quebrada), a esclamação significa "nao ("!")" entao "if(!quebrada)", se nao quebrada o documento que pega o elemento pelo id luz, vai procurar o "arquivo", assim gerando um loop e retornando a lampada ao seu estado de acesa ou apagada, caso ela quebre, a variavel assume o papel de matela quebrada*/
+    </script>
+    
+</head>
+<body>
+    <h1> Acenda a lampada</h1>
+    <img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove="mudaLampada(1)" onmouseout="mudaLampada(2)" onclick="mudaLampada(3)"/>
+    
+</body>
+</html>
