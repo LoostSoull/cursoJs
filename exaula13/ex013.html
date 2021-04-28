@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Calculador de Idade </title>
+
+    <header>
+        <h1>Calculador de Idade</h1>
+    </header>
+
+    <section>
+      <div id="principal">
+         <p>Digite sua Data de Nascimento: <input type="number" name="txtidade" id="txtidade" min="0"></p>
+
+            <p>Informe seu Sexo: <input type="radio" name="radsex" id="masc"> 
+              <label for="masc">Masculino</label>
+
+               <input type="radio" name="radsex" id="fem"> 
+                  <label for="fem">Feminino</label></p>
+
+                  <p><input type="button" value="Calcular" onclick="calcular()"></p>
+      </div>
+      <div id="res">
+       Estamos Calculando
+      </div>
+    </section>
+
+    <footer>
+     &copy; Lucas
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

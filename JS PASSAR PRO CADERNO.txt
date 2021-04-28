@@ -1,0 +1,20 @@
+> var n1 = 1480.5
+undefined
+> n1
+1480.5
+> n1.toFixed(2)
+'1480.50'
+> n1.toFixed(2).replace('.' , ',')
+'1480,50'
+>
+
+aqui temos exemplos de como adicionar uma casa decimal em um numero, como por exemplo um salario
+invez de 1480.5 ele vai para 1480.50 com o atributo toFixed e para trocar o ponto por uma virgula vamos
+utilizar o replace('.' , ',') indicando que estamos trocando um ponto por uma virgula.
+
+> n1.toLocaleString('pt-BR', {style: 'currency' , currency: 'BRL'})
+'R$ 1.480,50'
+o atributo toLocaleString é bem complexo pois ele trabalha com objetos(ainda nao aprendi), em seguida vamos abrir
+parentese e incluir a localização dessa string usando 'pt-BR' (respeitando o sensitive case), separado por uma virgula vamos abrir
+chaves para incluir os parametros do objeto, sendo assim: ('pt-BR' , {}, dentro das chaves temos o style, que vai ser 'currency'(dinheiro)
+separado por uma virgula declaramos que esse dinheiro vai ser BRL, tudo dentro das chaves e parenteses vao usar aspas simples. 

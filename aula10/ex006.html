@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Dom</title>
+    <style>
+        div#area{
+            font: normal 20pt arial;
+            color: #ffffff;
+            background-color: #17db17;
+            height: 200px;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="area">interaja...</div>
+    <!--<div id="area" onclick="clicar()" onmouseover="entrou()" onmouseout="saiu()" > esse comando seria utilizado para disparar as funções caso fossem declaradas no html, porem elas foram disparadas no JS-->
+    <script>
+        var a = document.getElementById('area')
+        //para adicionar os eventos direto no JS usamos o assEventListener 
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrou)
+        a.addEventListener('mouseout', saiu)
+
+        function clicar() {
+            
+            a.innerText = 'clicou!'
+            a.style.background = 'red'
+        }
+        function entrou(){
+            a.innerText = 'entrou'
+        }
+        function saiu(){
+            a.innerText = 'saiu'
+            a.style.background = '#17db17'
+        }
+
+        
+    </script>
+</body>
+</html>

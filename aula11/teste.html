@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+    <!--titulo kkk-->
+    <span style='font-family:"Arial Black";font-size:20px;'><span style='color:#FF0000;'>D</span><span style='color:#FF4500;'>e</span><span style='color:#FF8B00;'>s</span><span style='color:#FFD000;'>c</span><span style='color:#E7FF00;'>u</span><span style='color:#A2FF00;'>b</span><span style='color:#5CFF00;'>r</span><span style='color:#17FF00;'>a</span> <span style='color:#00FF73;'>s</span><span style='color:#00FFB9;'>e</span> <span style='color:#00B9FF;'>V</span><span style='color:#0073FF;'>o</span><span style='color:#002EFF;'>c</span><span style='color:#1700FF;'>e</span> <span style='color:#A200FF;'>é</span> <span style='color:#FF00D0;'>G</span><span style='color:#FF008B;'>a</span><span style='color:#FF0045;'>y</span></span>
+    <!--titulo-->
+    <p>Digite Seu Nome: <input type="text" name="n1" id="n1"> <input type="button" value="Descobrir" onclick="clicou()"></p>
+    <div id="res"></div>
+
+    <script>
+        function clicou() {
+            var texto = document.querySelector('input#n1')
+            var res = document.querySelector('div#res')
+            var resul = texto.value
+            res.innerHTML = `<font color=#ff08b>VOCÊ É GAY ${resul}</font>`
+
+        }
+    </script>
+    
+</body>
+</html>

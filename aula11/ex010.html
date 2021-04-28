@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Você é estrangeiro?</h1>
+    Digite o seu País <input type="text" name="txt1" id="pais">
+    <input type="button" value="Confirmar" onclick="confirma()">
+    <div id="res"></div>
+
+    <script>
+        function confirma() {
+            var texto =  document.querySelector('input#pais')
+            var res = document.querySelector('div#res')
+            var resultado = (texto.value)
+            
+            if(resultado == 'Brasil'){
+                res.innerHTML=  'é Brasileiro'
+            }
+            else{
+                res.innerHTML = '<strong>Voce é Estrangeiro</strong>'
+            }
+           
+        }
+    </script>
+</body>
+</html>

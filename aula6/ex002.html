@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex2</title>
+    <style>
+        body{
+            background-color: rgb(78, 78, 148);
+            color: white;
+            font: 20px arial ;
+        }
+
+        h1{
+            color: rgb(219, 170, 9);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá,mundo!</h1>
+    <p> enfim, me livrei da maldição</p>
+
+    <script>
+      var n1 = Number(window.prompt('digite um numero'));//O Number(window.prompt('digite um numero')), serviu para conversão, tudo que esta dentro do parentese do Number, foi convertido para numero, ja que a variavel "n1" vai receber um valor em string, pois o window.prompt retorna uma string,mesmo que seja digitado um numero , ela trata como uma string , pois ele trata os dados dessa forma e precisamos força-lo a conversão.
+      var n2 = Number(window.prompt('digite outro numero'));
+      var s = n1 + n2;
+      window.alert('o resultado é ' + s);
+      // (string + string) serve para concatenação
+      //(number + number) serve para adição
+
+      //para conversoes podemos utilizar Number.parseInt ou Number.parseFloat *L E M B R A N D O (o N de Number sempre é maiúsculo e o I e F do Int e Float tambem sao maiusculos, JS é Sensitive Case, podemos utilizar na conversão somente parseInt. ou parseFloat. , porem nas novas normas de JS , podemos utilizar simplismente Number, pois o proprio JS vai captar os dados e escolher se sao numeros inteiros ou reais(flutuante)), porem se precisarmos tratar somente com numeros inteiros ou float, ainda precisamos usar esses parametros, caso nao haja necessidade, vamos usar o number.
+
+      //Podemos tambem converter para String com dois comandos, String() ou "meu conteudo em Number".toString() (se necessidade das aspas)
+
+     //podemos utilizar a crase (``) para iniciar um template string(formatador de string ) e dentro da crase declarar o valor da variavel de de um ${} que é chamado de place holder, assim simplificando nossa linha de codigo, seguindo o exemplo acima, podemos fazer: window.alert(`a soma de ${n1} e ${n2} é ${s}`); percebemos que nao houve a necessidade de utilizar concatenação com as strings
+    </script>
+</body>
+</html>
