@@ -7,7 +7,7 @@ function carregar(){
     
     msg.innerHTML = `Agora São ${hora} horas  ` 
 
-    if(hora > 0){
+    if(hora>4 && hora <12){
         //bom dia
      foto.src = 'manha.png'
      document.body.style.background = '#e2cd9f'
